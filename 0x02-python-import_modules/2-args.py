@@ -2,12 +2,18 @@
 # File name: 2-args.py
 # Auth: Vivian Okaforcha
 
-import sys
+from sys import argv
 
 if __name__ == "__main__":
-    def main():
-        no_of_args = len(sys.argv) - 1
-        print(f"{no_of_args} argument(s):")
+    n = len(argv) - 1
+    str = "arguments"
 
-        for i, arg in enumerate(sys.argv[1:], start=1):
-            print(f"Argument {i}: {arg}")
+    if n == 0:
+        print("0 arguments.")
+    elif n == 1:
+        print("1 argument:")
+    else:
+        print("{} {}:".format(n, str))
+
+    for i in range(n):
+        print("{}: {}".format(i + 1, argv[i + 1]))
