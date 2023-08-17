@@ -8,4 +8,4 @@ def uniq_add(my_list=[]):
         for i in set(my_list):
             if i not in unique_int:
                 result = i + result
-        return result
+        return (result)
